@@ -1,0 +1,67 @@
+/* RIME 雾凇服务器文档 - 自定义样式 */
+
+/* VitePress 内置渐变效果配置 */
+:root {
+  /* 品牌颜色定义 */
+  --vp-c-brand-1: #5a67d8;
+  --vp-c-brand-2: #667eea;
+  --vp-c-brand-3: #764ba2;
+  
+  /* Hero 标题渐变效果 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    var(--vp-c-brand-1) 30%,
+    var(--vp-c-brand-2)
+  );
+  
+  /* Hero 图片背景渐变 */
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.95) 0%,
+    rgba(118, 75, 162, 0.9) 20%,
+    rgba(240, 147, 251, 0.85) 40%,
+    rgba(245, 87, 108, 0.8) 60%,
+    rgba(79, 172, 254, 0.75) 80%,
+    rgba(102, 126, 234, 0.7) 100%
+  );
+  
+  /* 渐变模糊效果 - 响应式 */
+  --vp-home-hero-image-filter: blur(60px);
+}
+
+/* 响应式渐变模糊调整 */
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(80px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(100px);
+  }
+}
+
+/* 增强首页卡片的视觉效果 */
+.VPFeature {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 自定义按钮样式 */
+.VPButton.brand {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.VPButton.brand:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}

@@ -1,0 +1,21 @@
+{
+  "name": "rime-docs-vitepress",
+  "version": "1.0.0",
+  "description": "RIME · 雾凇服务器官方文档站点",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": ["minecraft", "modpack", "atm10", "gtnh", "documentation"],
+  "author": "RIME · 雾凇",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/RIME-docs-vitepress.git"
+  },
+  "homepage": "https://docs.abreeze.icu"
+}
