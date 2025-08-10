@@ -72,4 +72,4 @@ npm run docs:preview
 
 ---
 
-© 2025 RIME · 雾凇. 保留所有权利。
+© 2025 RIME · 雾凇

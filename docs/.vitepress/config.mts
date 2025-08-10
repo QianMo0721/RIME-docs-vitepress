@@ -41,7 +41,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '基于 MIT 许可发布',
+      message: '基于 MIT 许可证开源',
       copyright: 'Copyright © 2025 RIME · 雾凇'
     },
 
