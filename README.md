@@ -49,10 +49,10 @@ npm run docs:preview
 │   ├── getting-started.md     # 快速开始
 │   ├── tutorial.md            # 入服教程
 │   ├── faq.md                 # 常见问题
-│   ├── atm10.md              # ATM10 区服介绍
-│   ├── gtnh.md               # GTNH 区服介绍
 │   ├── rules.md              # 服务器规则
-│   └── contact.md            # 联系我们
+│   └── resource/             # 静态资源文件
+├── .nvmrc                    # Node.js 版本配置
+├── vercel.json              # Vercel 部署配置
 ├── package.json
 └── README.md
 ```
