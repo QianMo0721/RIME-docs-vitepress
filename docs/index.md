@@ -22,30 +22,51 @@ hero:
     - theme: alt
       text: 🎮 常用指令
       link: /commands
-
-features:
-  - title: 🚀 ATM10 区服
-    details: 体验最新版本的ATM10整合包，涵盖科技、魔法、冒险等多种元素，为玩家提供丰富的游戏内容和挑战
-  - title: ⚙️ GTNH 区服
-    details: 专注于GTNH整合包，深度体验工业科技的魅力，挑战复杂的科技树和生产流程
-  - title: 🌟 服务器特色
-    details: 跟进整合包最新版本、玩家和谐友好、进度流程简单、管理层常在线及时解决问题
-  - title: 🎮 服务器地址
-    details: "mc.abreeze.icu | gtnh.abreeze.icu"
-  - title: 👥 QQ群
-    details: "567367746"
-  - title: 📚 官网
-    details: "rime.abreeze.icu"
 ---
 
-## 欢迎来到 RIME · 雾凇
+<!-- 特性卡片区域 -->
+<FeatureCards />
 
-RIME · 雾凇是一个专注于科技整合包的 Minecraft 服务器，我们提供两个特色区服供玩家选择，无论你是喜欢探索魔法科技的新手，还是追求极致工业挑战的老玩家，这里都有适合你的游戏体验。
+<div style="padding: 1.8rem; margin: 2rem auto 0 auto; max-width: 1200px;">
 
-### 快速连接
+<h2 style="margin: 0 0 0.4rem 0; font-size: 1.5rem; color: #1a1a1a;">欢迎来到 RIME · 雾凇</h2>
 
-- **服务器地址**: `mc.abreeze.icu | gtnh.abreeze.icu`
-- **QQ 交流群**: 567367746
-- **官方网站**: [rime.abreeze.icu](https://rime.abreeze.icu/)
+<div style="background: rgba(255, 255, 255, 0.2); border-radius: 1rem; padding: 1.3rem; margin: 0.4rem 0; backdrop-filter: blur(2px);">
 
-准备好开始你的科技之旅了吗？点击上方的"入服教程"开始吧！
+<span style="color: #1a1a1a; line-height: 1.6; font-size: 1rem;">RIME · 雾凇是一个专注于科技整合包的 Minecraft 服务器，我们提供两个特色区服供玩家选择，无论你是喜欢探索魔法科技的新手，还是追求极致工业挑战的老玩家，这里都有适合你的游戏体验。</span>
+
+</div>
+
+<div style="background: rgba(255, 255, 255, 0.2); border-radius: 1rem; padding: 1.3rem; margin: 0.4rem 0; backdrop-filter: blur(2px);">
+
+<h3 style="margin: 0 0 0.4rem 0; font-size: 1.2rem; color: #1a1a1a;">🚀 快速连接</h3>
+
+<div style="display: grid; gap: 0.6rem; margin-top: 0.3rem;">
+
+<div style="background: rgba(255, 255, 255, 0.3); border-radius: 0.7rem; padding: 1rem; backdrop-filter: blur(2px); transition: all 0.3s ease;">
+<strong style="color: #4f46e5; font-size: 0.9rem;">🌐 服务器地址</strong><br/>
+<code style="background: rgba(102, 126, 234, 0.1); color: #1a1a1a; padding: 0.3rem 0.7rem; border-radius: 0.4rem; font-weight: 600; margin-top: 0.2rem; display: inline-block; font-size: 0.9rem;">mc.abreeze.icu | gtnh.abreeze.icu</code>
+</div>
+
+<div style="background: rgba(255, 255, 255, 0.3); border-radius: 0.7rem; padding: 1rem; backdrop-filter: blur(2px); transition: all 0.3s ease;">
+<strong style="color: #e11d48; font-size: 0.9rem;">💬 QQ 交流群</strong><br/>
+<span style="font-size: 1.1rem; font-weight: 600; color: #1a1a1a; margin-top: 0.2rem; display: inline-block;">567367746</span>
+</div>
+
+<div style="background: rgba(255, 255, 255, 0.3); border-radius: 0.7rem; padding: 1rem; backdrop-filter: blur(2px); transition: all 0.3s ease;">
+<strong style="color: #d97706; font-size: 0.9rem;">🏠 官方网站</strong><br/>
+<a href="https://rime.abreeze.icu/" style="color: #1a1a1a; text-decoration: none; font-weight: 600; border-bottom: 2px solid rgba(217, 119, 6, 0.4); transition: all 0.3s ease; margin-top: 0.2rem; display: inline-block; font-size: 0.95rem;">rime.abreeze.icu</a>
+</div>
+
+</div>
+
+</div>
+
+<div style="text-align: center; background: rgba(255, 255, 255, 0.2); border-radius: 1rem; padding: 1.5rem; margin: 0.4rem 0 0 0; backdrop-filter: blur(2px);">
+
+<p style="font-size: 1.05rem; color: #059669; font-weight: 600; margin: 0; line-height: 1.4;">准备好开始你的科技之旅了吗？</p>
+<p style="margin: 0.5rem 0 0 0; color: #1a1a1a; font-size: 0.9rem;">点击上方的"入服教程"开始吧！ ✨</p>
+
+</div>
+
+</div>
