@@ -1,6 +1,19 @@
 import { defineConfig } from "vitepress";
+import tailwindcss from "@tailwindcss/postcss";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
+  // 集成 PostCSS 和 Tailwind CSS
+  vite: {
+    css: {
+      postcss: {
+        plugins: [
+          tailwindcss({}),
+          autoprefixer({}),
+        ],
+      },
+    },
+  },
   title: "RIME · 雾凇服务器文档",
   description:
     "RIME · 雾凇 Minecraft 服务器官方文档站点 - 体验最新版本的ATM10和GTNH整合包",

@@ -17,6 +17,10 @@
   "author": "RIME · 雾凇",
   "license": "MIT",
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
     "vitepress": "^1.6.4"
   },
   "overrides": {
@@ -26,5 +30,8 @@
     "type": "git",
     "url": "https://github.com/QianMoo0121/RIME-docs-vitepress.git"
   },
-  "homepage": "https://docs.abreeze.icu"
+  "homepage": "https://docs.abreeze.icu",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11"
+  }
 }

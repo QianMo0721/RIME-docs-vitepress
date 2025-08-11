@@ -6,6 +6,41 @@
 /* 导入现代字体 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   VPDoc 现代化细节增强
+   ========================= */
+
+/* 标题锚点链接悬停效果 */
+.vp-doc .header-anchor {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: 500;
+  margin-left: 0.5em;
+}
+
+.vp-doc h1:hover .header-anchor,
+.vp-doc h2:hover .header-anchor,
+.vp-doc h3:hover .header-anchor,
+.vp-doc h4:hover .header-anchor,
+.vp-doc h5:hover .header-anchor,
+.vp-doc h6:hover .header-anchor {
+  opacity: 0.6;
+}
+
+.vp-doc .header-anchor:hover {
+  opacity: 1;
+  color: var(--rime-primary-600, #0891b2);
+}
+
+.dark .vp-doc .header-anchor:hover {
+  color: var(--rime-primary-400, #22d3ee);
+}
+
+
 /* ========================= 全新颜色系统定义 ========================= */
 :root {
   /* ===== 基础色彩调色板 (Base Color Palette) ===== */

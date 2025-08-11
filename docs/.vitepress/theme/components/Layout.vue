@@ -33,6 +33,23 @@
     <template #nav-bar-content-after>
       <slot name="nav-bar-content-after" />
     </template>
+
+    <!-- 使用 ModernDocWrapper 包裹文档内容 -->
+    <template #doc-before>
+      <ModernDocWrapper>
+        <template #default>
+          <slot name="doc-before" />
+        </template>
+      </ModernDocWrapper>
+    </template>
+
+    <template #doc-after>
+      <ModernDocWrapper>
+        <template #default>
+          <slot name="doc-after" />
+        </template>
+      </ModernDocWrapper>
+    </template>
   </DefaultTheme.Layout>
 </template>
 
