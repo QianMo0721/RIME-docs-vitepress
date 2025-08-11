@@ -394,39 +394,6 @@ body {
 
 /* 自定义Hero区域背景 - 移除顶部间距避免空白 */
 .VPHome {
-  background: linear-gradient(
-    180deg,
-    color-mix(
-        in srgb,
-        var(--rime-primary-500),
-        transparent calc(100% - var(--rime-alpha-10) * 100%)
-      )
-      0%,
-    color-mix(
-        in srgb,
-        var(--rime-secondary-500),
-        transparent calc(100% - var(--rime-alpha-6) * 100%)
-      )
-      25%,
-    color-mix(
-        in srgb,
-        var(--rime-accent-500),
-        transparent calc(100% - var(--rime-alpha-4) * 100%)
-      )
-      50%,
-    color-mix(
-        in srgb,
-        var(--rime-primary-300),
-        transparent calc(100% - var(--rime-alpha-6) * 100%)
-      )
-      75%,
-    color-mix(
-        in srgb,
-        var(--rime-primary-500),
-        transparent calc(100% - var(--rime-alpha-10) * 100%)
-      )
-      100%
-  );
   min-height: 100vh;
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;

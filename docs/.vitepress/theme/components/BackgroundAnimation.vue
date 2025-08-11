@@ -253,6 +253,11 @@ onMounted(() => {
 
 /* 响应式优化 */
 @media (max-width: 768px) {
+  .particles,
+  .gradient-grid {
+    display: none;
+  }
+
   .orb {
     filter: blur(40px);
   }
