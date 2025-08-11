@@ -4,7 +4,7 @@
 
 ## 📖 关于服务器
 
-RIME · 雾凇是一个专注于科技整合包的Minecraft服务器，提供两个特色区服：
+RIME · 雾凇是一个专注于科技整合包的 Minecraft 服务器，提供两个特色区服：
 
 - **🚀 ATM10 区服**: 适合新手和追求多样化体验的玩家
 - **⚙️ GTNH 区服**: 适合资深玩家和追求极致挑战的玩家
@@ -12,7 +12,7 @@ RIME · 雾凇是一个专注于科技整合包的Minecraft服务器，提供两
 ## 🔗 相关链接
 
 - **服务器地址**: `mc.abreeze.icu`
-- **QQ交流群**: 567367746
+- **QQ 交流群**: 567367746
 - **官方网站**: [rime.abreeze.icu](https://rime.abreeze.icu/)
 - **文档站点**: [docs.abreeze.icu](https://docs.abreeze.icu/)
 

@@ -7,7 +7,13 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "keywords": ["minecraft", "modpack", "atm10", "gtnh", "documentation"],
+  "keywords": [
+    "minecraft",
+    "modpack",
+    "atm10",
+    "gtnh",
+    "documentation"
+  ],
   "author": "RIME · 雾凇",
   "license": "MIT",
   "devDependencies": {
