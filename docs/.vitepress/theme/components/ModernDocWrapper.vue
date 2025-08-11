@@ -375,69 +375,9 @@ onUnmounted(() => {
   min-height: 400px;
 }
 
-/* VPDoc样式覆盖 */
-.doc-content :deep(.VPDoc) {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-}
+/* VPDoc样式 - 使用默认样式 */
 
-.doc-content :deep(.vp-doc) {
-  padding: 0 !important;
-}
-
-/* 优化文档内容的可读性 */
-.doc-content :deep(h1),
-.doc-content :deep(h2),
-.doc-content :deep(h3),
-.doc-content :deep(h4),
-.doc-content :deep(h5),
-.doc-content :deep(h6) {
-  color: #6190e8;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-/* 确保锚点链接正确显示 */
-.doc-content :deep(.header-anchor) {
-  color: #6190e8;
-  opacity: 0;
-  transition: all 0.3s ease;
-  margin-left: 0.75rem;
-  text-decoration: none;
-  font-weight: normal;
-  font-size: 0.8em;
-  flex-shrink: 0;
-}
-
-.doc-content :deep(h1):hover .header-anchor,
-.doc-content :deep(h2):hover .header-anchor,
-.doc-content :deep(h3):hover .header-anchor,
-.doc-content :deep(h4):hover .header-anchor,
-.doc-content :deep(h5):hover .header-anchor,
-.doc-content :deep(h6):hover .header-anchor {
-  opacity: 1;
-}
-
-/* 移除标题底下的装饰线 */
-.doc-content :deep(h1)::after,
-.doc-content :deep(h2)::after,
-.doc-content :deep(h3)::after {
-  display: none !important;
-}
-
-.doc-content :deep(p) {
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  color: var(--vp-c-text-1);
-  font-size: 1.05rem;
-}
+/* 文档内容样式 - 使用默认样式 */
 
 /* ========================= 底部装饰 ========================= */
 .content-footer {

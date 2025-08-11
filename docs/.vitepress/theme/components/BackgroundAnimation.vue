@@ -94,6 +94,7 @@ onMounted(() => {
   opacity: var(--opacity);
   animation: float var(--duration) infinite linear;
   animation-delay: var(--delay);
+  will-change: transform, opacity;
 }
 
 @keyframes float {
@@ -173,6 +174,7 @@ onMounted(() => {
   width: 1px;
   height: 100%;
   animation: gridPulse 8s ease-in-out infinite;
+  will-change: opacity;
 }
 
 .grid-line.horizontal {
@@ -206,6 +208,7 @@ onMounted(() => {
   filter: blur(80px);
   opacity: 0.3;
   animation: orbFloat 20s ease-in-out infinite;
+  will-change: transform;
 }
 
 .orb-1 {

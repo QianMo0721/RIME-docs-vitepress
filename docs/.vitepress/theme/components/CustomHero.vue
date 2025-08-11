@@ -59,8 +59,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-
 // Hero 数据接口
 interface HeroAction {
   text: string;
@@ -102,15 +100,6 @@ const props = withDefaults(defineProps<Props>(), {
       { theme: "alt", text: "🎮 常用指令", link: "/commands" },
     ],
   }),
-});
-
-// 动画初始化
-onMounted(() => {
-  // 添加入场动画
-  const heroContent = document.querySelector(".hero-content");
-  if (heroContent) {
-    heroContent.classList.add("animate-in");
-  }
 });
 </script>
 
@@ -181,6 +170,7 @@ onMounted(() => {
   opacity: 0.4;
   animation: orbFloat 15s ease-in-out infinite;
   z-index: 1;
+  will-change: transform;
 }
 
 .orb-1 {
@@ -233,20 +223,26 @@ onMounted(() => {
 }
 
 /* ========================= 主要内容布局 ========================= */
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
   display: flex;
   align-items: center;
   gap: 4rem;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-content.animate-in {
-  opacity: 1;
-  transform: translateY(0);
+  /* Apply animation with a slight delay for better effect */
+  animation: hero-fade-in 0.8s 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, opacity;
 }
 
 /* ========================= Logo 区域 ========================= */
@@ -268,6 +264,7 @@ onMounted(() => {
   border-radius: 2rem;
   transition: all 0.3s ease;
   animation: logoFloat 6s ease-in-out infinite;
+  will-change: transform;
 }
 
 .logo-image:hover {
@@ -322,7 +319,7 @@ onMounted(() => {
   color: transparent;
   text-shadow: none;
   animation: gradientFlow 25s linear infinite;
-  will-change: background-position;
+  will-change: background-position, transform, filter;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
