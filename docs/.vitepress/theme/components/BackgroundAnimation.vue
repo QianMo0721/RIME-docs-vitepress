@@ -1,6 +1,5 @@
 <template>
   <div class="background-animation">
-    <!-- 浮动粒子效果 -->
     <div class="particles">
       <div
         v-for="i in particleCount"
@@ -15,7 +14,6 @@
       ></div>
     </div>
 
-    <!-- 渐变网格背景 -->
     <div class="gradient-grid">
       <div
         class="grid-line"
@@ -31,7 +29,6 @@
       ></div>
     </div>
 
-    <!-- 动态渐变背景 -->
     <div class="gradient-orbs">
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
@@ -46,7 +43,6 @@ import { ref, onMounted } from "vue";
 const particleCount = ref(50);
 
 onMounted(() => {
-  // 根据屏幕大小调整粒子数量
   const updateParticleCount = () => {
     if (window.innerWidth < 768) {
       particleCount.value = 20;
@@ -78,7 +74,6 @@ onMounted(() => {
   overflow: hidden;
 }
 
-/* 浮动粒子效果 */
 .particles {
   position: absolute;
   width: 100%;
@@ -114,7 +109,6 @@ onMounted(() => {
   }
 }
 
-/* 每个粒子的起始位置随机化 */
 .particle:nth-child(2n) {
   left: 10%;
   animation-direction: reverse;
@@ -160,7 +154,6 @@ onMounted(() => {
   animation-direction: reverse;
 }
 
-/* 渐变网格背景 */
 .gradient-grid {
   position: absolute;
   width: 100%;
@@ -195,7 +188,6 @@ onMounted(() => {
   }
 }
 
-/* 动态渐变背景 */
 .gradient-orbs {
   position: absolute;
   width: 100%;
@@ -251,7 +243,6 @@ onMounted(() => {
   }
 }
 
-/* 响应式优化 */
 @media (max-width: 768px) {
   .particles,
   .gradient-grid {
@@ -282,7 +273,6 @@ onMounted(() => {
   }
 }
 
-/* 减少动画对性能的影响 */
 @media (prefers-reduced-motion: reduce) {
   .particle,
   .orb,

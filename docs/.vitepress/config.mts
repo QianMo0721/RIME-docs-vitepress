@@ -3,14 +3,10 @@ import tailwindcss from "@tailwindcss/postcss";
 import autoprefixer from "autoprefixer";
 
 export default defineConfig({
-  // 集成 PostCSS 和 Tailwind CSS
   vite: {
     css: {
       postcss: {
-        plugins: [
-          tailwindcss({}),
-          autoprefixer({}),
-        ],
+        plugins: [tailwindcss({}), autoprefixer({})],
       },
     },
   },
@@ -145,7 +141,6 @@ export default defineConfig({
     lineNumbers: true,
   },
 
-  // 启用 sitemap
   sitemap: {
     hostname: "https://docs.abreeze.icu",
   },

@@ -1,36 +1,27 @@
 <template>
   <div class="custom-hero">
-    <!-- 英雄区域容器 -->
     <div class="hero-container">
-      <!-- 高斯模糊背景板 -->
       <div class="hero-background-panel">
-        <!-- 背景装饰元素 -->
         <div class="background-decoration">
           <div class="decoration-orb orb-1"></div>
           <div class="decoration-orb orb-2"></div>
           <div class="decoration-orb orb-3"></div>
         </div>
 
-        <!-- 主要内容区域 -->
         <div class="hero-content">
-          <!-- 左侧：文字内容 -->
           <div class="hero-text">
-            <!-- 主标题 -->
             <h1 class="hero-name">
               {{ heroData.name }}
             </h1>
 
-            <!-- 副标题 -->
             <p class="hero-subtitle">
               {{ heroData.text }}
             </p>
 
-            <!-- 描述文字 -->
             <p class="hero-tagline">
               {{ heroData.tagline }}
             </p>
 
-            <!-- 操作按钮组 -->
             <div class="hero-actions">
               <template v-for="action in heroData.actions" :key="action.text">
                 <a
@@ -44,7 +35,6 @@
             </div>
           </div>
 
-          <!-- 右侧：Logo -->
           <div class="hero-logo">
             <img
               :src="heroData.image.src"
@@ -59,7 +49,6 @@
 </template>
 
 <script setup lang="ts">
-// Hero 数据接口
 interface HeroAction {
   text: string;
   link: string;
@@ -79,7 +68,6 @@ interface HeroData {
   actions: HeroAction[];
 }
 
-// 接收Hero数据的props
 interface Props {
   heroData?: HeroData;
 }
@@ -104,7 +92,6 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <style scoped>
-/* ========================= 主容器样式 ========================= */
 .custom-hero {
   position: relative;
   min-height: 100vh;
@@ -124,7 +111,6 @@ const props = withDefaults(defineProps<Props>(), {
   z-index: 2;
 }
 
-/* ========================= 高斯模糊背景板 ========================= */
 .hero-background-panel {
   position: relative;
   background: rgba(255, 255, 255, 0.15);
@@ -147,12 +133,10 @@ const props = withDefaults(defineProps<Props>(), {
     0 0 100px rgba(102, 126, 234, 0.2);
 }
 
-/* 深色模式下降低装饰球的不透明度，避免遮挡文字 */
 .dark .decoration-orb {
   opacity: 0.25;
 }
 
-/* 背景装饰元素 */
 .background-decoration {
   position: absolute;
   top: 0;

@@ -1,9 +1,7 @@
 <template>
   <DefaultTheme.Layout :class="{ 'modern-layout': !isHomePage }">
-    <!-- 背景动画只在主页显示 -->
     <template #layout-top>
       <BackgroundAnimation v-if="isHomePage" />
-      <!-- 非主页的现代化背景 -->
       <div v-else class="modern-doc-background">
         <div class="gradient-orb gradient-orb-1"></div>
         <div class="gradient-orb gradient-orb-2"></div>
@@ -11,30 +9,18 @@
       </div>
     </template>
 
-    <!-- 自定义Hero区域 -->
     <template #home-hero-before>
       <CustomHero v-if="isHomePage" :heroData="heroData" />
     </template>
 
-    <!-- 隐藏默认Hero -->
-    <template #home-hero-info>
-      <div v-if="isHomePage" style="display: none"></div>
-    </template>
+    <template #home-hero-info v-if="isHomePage"></template>
+    <template #home-hero-image v-if="isHomePage"></template>
+    <template #home-hero-actions v-if="isHomePage"></template>
 
-    <template #home-hero-image>
-      <div v-if="isHomePage" style="display: none"></div>
-    </template>
-
-    <template #home-hero-actions>
-      <div v-if="isHomePage" style="display: none"></div>
-    </template>
-
-    <!-- 导航栏扩展 -->
     <template #nav-bar-content-after>
       <slot name="nav-bar-content-after" />
     </template>
 
-    <!-- 使用 ModernDocWrapper 包裹文档内容 -->
     <template #doc-before>
       <ModernDocWrapper>
         <template #default>
@@ -53,7 +39,8 @@
   </DefaultTheme.Layout>
 </template>
 
-<script setup lang="ts">import { computed } from "vue";
+<script setup lang="ts">
+import { computed } from "vue";
 import { useRoute, useData } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import BackgroundAnimation from "./BackgroundAnimation.vue";
@@ -62,12 +49,10 @@ import CustomHero from "./CustomHero.vue";
 const route = useRoute();
 const { frontmatter } = useData();
 
-// 检查是否为主页
 const isHomePage = computed(() => {
   return route.path === "/" || route.path === "/index.html";
 });
 
-// 获取Hero数据
 const heroData = computed(() => {
   if (!frontmatter.value?.hero) return undefined;
 
@@ -85,7 +70,6 @@ const heroData = computed(() => {
 </script>
 
 <style scoped>
-/* 现代化文档背景 */
 .modern-doc-background {
   position: fixed;
   top: 0;
@@ -164,9 +148,6 @@ const heroData = computed(() => {
   }
 }
 
-/* VPDoc样式 - 使用默认主题 */
-
-/* 响应式 */
 @media (max-width: 768px) {
   .gradient-orb {
     filter: blur(40px);
@@ -189,7 +170,6 @@ const heroData = computed(() => {
   }
 }
 
-/* 移动端专门优化 */
 @media (max-width: 480px) {
   .gradient-orb {
     filter: blur(30px);
@@ -212,7 +192,6 @@ const heroData = computed(() => {
   }
 }
 
-/* 性能优化 */
 @media (prefers-reduced-motion: reduce) {
   .gradient-orb {
     animation: none;

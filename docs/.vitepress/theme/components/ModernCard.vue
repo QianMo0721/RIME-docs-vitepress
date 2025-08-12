@@ -5,28 +5,21 @@
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
   >
-    <!-- 卡片光晕效果 -->
     <div class="card-glow"></div>
 
-    <!-- 卡片内容 -->
     <div class="card-content">
-      <!-- 图标区域 -->
       <div class="card-icon" v-if="icon">
         <component :is="iconComponent" />
       </div>
 
-      <!-- 标题 -->
       <h3 class="card-title" v-if="title">{{ title }}</h3>
 
-      <!-- 描述 -->
       <p class="card-description" v-if="description">{{ description }}</p>
 
-      <!-- 插槽内容 -->
       <div class="card-slot">
         <slot />
       </div>
 
-      <!-- 链接按钮 -->
       <a v-if="link" :href="link" class="card-link">
         <span>了解更多</span>
         <svg
@@ -47,7 +40,6 @@
       </a>
     </div>
 
-    <!-- 装饰性元素 -->
     <div class="card-decoration">
       <div class="decoration-circle decoration-1"></div>
       <div class="decoration-circle decoration-2"></div>
@@ -73,7 +65,6 @@ const props = withDefaults(defineProps<Props>(), {
 
 const isHovered = ref(false);
 
-// 图标组件映射
 const iconComponents = {
   rocket: () => "🚀",
   gear: () => "⚙️",
@@ -112,7 +103,6 @@ const iconComponent = computed(() => {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* 卡片光晕效果 */
 .card-glow {
   position: absolute;
   top: 0;
@@ -134,13 +124,11 @@ const iconComponent = computed(() => {
   opacity: 1;
 }
 
-/* 卡片内容 */
 .card-content {
   position: relative;
   z-index: 2;
 }
 
-/* 图标样式 */
 .card-icon {
   display: inline-flex;
   align-items: center;
@@ -160,7 +148,6 @@ const iconComponent = computed(() => {
   box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
 }
 
-/* 标题样式 */
 .card-title {
   font-size: 1.25rem;
   font-weight: 600;
@@ -174,7 +161,6 @@ const iconComponent = computed(() => {
   color: var(--vp-c-brand-1);
 }
 
-/* 描述样式 */
 .card-description {
   color: var(--vp-c-text-2);
   line-height: 1.6;
@@ -186,7 +172,6 @@ const iconComponent = computed(() => {
   color: var(--vp-c-text-1);
 }
 
-/* 插槽内容 */
 .card-slot {
   margin-bottom: 1.5rem;
 }
@@ -195,7 +180,6 @@ const iconComponent = computed(() => {
   margin-bottom: 0;
 }
 
-/* 链接按钮 */
 .card-link {
   display: inline-flex;
   align-items: center;
@@ -224,7 +208,6 @@ const iconComponent = computed(() => {
   transform: translateX(2px);
 }
 
-/* 装饰性元素 */
 .card-decoration {
   position: absolute;
   top: 0;
@@ -277,7 +260,6 @@ const iconComponent = computed(() => {
   }
 }
 
-/* 悬停效果 */
 .modern-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(102, 126, 234, 0.2);
@@ -288,7 +270,6 @@ const iconComponent = computed(() => {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(102, 126, 234, 0.4);
 }
 
-/* 响应式设计 */
 @media (max-width: 768px) {
   .modern-card {
     padding: 1.5rem;
@@ -310,7 +291,6 @@ const iconComponent = computed(() => {
   }
 }
 
-/* 减少动画（用户偏好） */
 @media (prefers-reduced-motion: reduce) {
   .modern-card,
   .card-icon,
@@ -321,7 +301,6 @@ const iconComponent = computed(() => {
   }
 }
 
-/* 颜色变体 */
 .modern-card.color-secondary .card-icon {
   background: linear-gradient(135deg, #f093fb, #f5576c);
 }
