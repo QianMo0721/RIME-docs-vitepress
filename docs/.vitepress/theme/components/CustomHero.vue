@@ -75,7 +75,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   heroData: () => ({
     name: "RIME · 雾凇",
-    text: "ATM10 & GTNH 双区服科技服务器",
+    text: "新星周目 & GTNH 双区服科技服务器",
     tagline: "致力于寻找玩法与稳定的Minecraft服务器",
     image: {
       src: "https://img.cdn1.vip/i/68986baa3322c_1754819498.webp",
@@ -433,6 +433,9 @@ const props = withDefaults(defineProps<Props>(), {
   );
   color: white;
   box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+  border: none;
 }
 
 .button-brand::before {

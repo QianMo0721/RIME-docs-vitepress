@@ -12,7 +12,7 @@ export default defineConfig({
   },
   title: "RIME · 雾凇服务器文档",
   description:
-    "RIME · 雾凇 Minecraft 服务器官方文档站点 - 体验最新版本的ATM10和GTNH整合包",
+    "RIME · 雾凇 Minecraft 服务器官方文档站点 - 体验最新版本的新星周目和GTNH整合包",
 
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
