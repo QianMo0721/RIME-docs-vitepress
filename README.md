@@ -2,6 +2,8 @@
 
 这是 RIME · 雾凇 Minecraft 服务器的官方文档站点，使用 VitePress 构建。
 
+# 这是半Vibe Coding项目，不要抄！
+
 ## 📖 关于服务器
 
 RIME · 雾凇是一个专注于科技整合包的 Minecraft 服务器，提供两个特色区服：
