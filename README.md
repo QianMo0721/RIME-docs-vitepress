@@ -73,5 +73,3 @@ npm run docs:preview
 本项目使用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
 ---
-
-© 2025 RIME · 雾凇
