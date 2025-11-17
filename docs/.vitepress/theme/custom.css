@@ -7,7 +7,9 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   font-weight: 500;
-  margin-left: 0.5em;
+  float: left;
+  margin-left: -0.9em;
+  padding-right: 0.25em;
 }
 
 .vp-doc h1:hover .header-anchor,
@@ -119,6 +121,20 @@
   --rime-neutral-800: #1e293b;
   --rime-neutral-900: #0f172a;
   --rime-neutral-950: #020617;
+
+  /* Gray aliases for components that use --rime-gray-* */
+  --rime-gray-50: var(--rime-neutral-50);
+  --rime-gray-100: var(--rime-neutral-100);
+  --rime-gray-200: var(--rime-neutral-200);
+  --rime-gray-300: var(--rime-neutral-300);
+  --rime-gray-400: var(--rime-neutral-400);
+  --rime-gray-500: var(--rime-neutral-500);
+  --rime-gray-600: var(--rime-neutral-600);
+  --rime-gray-700: var(--rime-neutral-700);
+  --rime-gray-800: var(--rime-neutral-800);
+  --rime-gray-900: var(--rime-neutral-900);
+  --rime-gray-950: var(--rime-neutral-950);
+
   --rime-alpha-2: 0.02;
   --rime-alpha-4: 0.04;
   --rime-alpha-6: 0.06;
@@ -292,9 +308,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background: #fafafa;
+  background: var(--rime-surface-background);
   background-attachment: fixed;
   min-height: 100vh;
+}
+
+.dark body {
+  background: #020617;
 }
 
 ::selection {
@@ -309,7 +329,7 @@ body {
 
 .VPNavBarMenuLink.active,
 .VPNavBarMenuLink[aria-current="page"] {
-  color: #000000 !important;
+  color: var(--rime-text-primary) !important;
   font-weight: 700 !important;
   background: linear-gradient(
     135deg,
@@ -324,7 +344,7 @@ body {
 
 .VPNavBar .VPNavBarMenu a.router-link-active,
 .VPNavBar .VPNavBarMenu a.router-link-exact-active {
-  color: #000000 !important;
+  color: var(--rime-text-primary) !important;
   font-weight: 700 !important;
   background: linear-gradient(
     135deg,
@@ -479,6 +499,11 @@ div[class*="language-"] {
   border-radius: var(--rime-radius-2xl) var(--rime-radius-2xl) 0 0;
 }
 
+.dark .VPFooter {
+  background: rgba(15, 23, 42, 0.9);
+  border-top-color: rgba(15, 23, 42, 0.9);
+}
+
 @media (min-width: 960px) {
   :root {
     --vp-home-hero-image-filter: var(--rime-blur-2xl);
@@ -525,6 +550,12 @@ div[class*="language-"] {
 
 .VPContent {
   animation: fadeIn 0.6s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .VPContent {
+    animation: none;
+  }
 }
 
 [data-tooltip] {

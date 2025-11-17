@@ -1,7 +1,7 @@
 <template>
   <div
     class="modern-card"
-    :class="{ 'card-hover': isHovered }"
+    :class="[colorClass, { 'card-hover': isHovered } ]"
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
   >
@@ -64,6 +64,8 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const isHovered = ref(false);
+
+const colorClass = computed(() => `color-${props.color}`);
 
 const iconComponents = {
   rocket: () => "🚀",

@@ -2,15 +2,15 @@
   <div class="feature-cards-container">
     <div class="feature-cards-grid">
       <ModernCard
-        title="🚀 新星周目 区服"
-        description="体验最新版本的新星周目整合包，涵盖科技、魔法、冒险等多种元素，为玩家提供丰富的游戏内容和挑战"
+        title="🚀 GregTech Odyssey 区服"
+        description="以 GregTech 为核心的魔改科技整合包，辅以魔法与冒险内容"
         icon="rocket"
         color="primary"
       />
 
       <ModernCard
-        title="⚙️ GTNH 区服"
-        description="专注于GTNH整合包，深度体验工业科技的魅力，挑战复杂的科技树和生产流程"
+        title="⚙️ FTB StoneBlock 4 区服"
+        description="出生在完全由石头封闭的空间，通过挖掘、筛选和合成逐步获取资源并扩展基地"
         icon="gear"
         color="secondary"
       />
@@ -24,7 +24,7 @@
 
       <ModernCard
         title="🎮 服务器地址"
-        description="mc.abreeze.icu | gtnh.abreeze.icu"
+        description="mc.abreeze.icu"
         icon="gamepad"
         color="primary"
       />

@@ -5,12 +5,7 @@
         v-for="i in particleCount"
         :key="i"
         class="particle"
-        :style="{
-          '--delay': `${Math.random() * 10}s`,
-          '--duration': `${15 + Math.random() * 20}s`,
-          '--size': `${2 + Math.random() * 4}px`,
-          '--opacity': Math.random() * 0.7 + 0.3,
-        }"
+        :style="getParticleStyle(i)"
       ></div>
     </div>
 
@@ -38,27 +33,48 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const particleCount = ref(50);
 
-onMounted(() => {
-  const updateParticleCount = () => {
-    if (window.innerWidth < 768) {
-      particleCount.value = 20;
-    } else if (window.innerWidth < 1024) {
-      particleCount.value = 35;
-    } else {
-      particleCount.value = 50;
-    }
-  };
+const updateParticleCount = () => {
+  if (typeof window === "undefined") return;
 
+  if (window.innerWidth < 768) {
+    particleCount.value = 20;
+  } else if (window.innerWidth < 1024) {
+    particleCount.value = 35;
+  } else {
+    particleCount.value = 50;
+  }
+};
+
+const seededRandom = (seed: number) => {
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+};
+
+const getParticleStyle = (index: number) => {
+  const delay = seededRandom(index * 3.17) * 10; // 0–10s
+  const duration = 15 + seededRandom(index * 5.31) * 20; // 15–35s
+  const size = 2 + seededRandom(index * 7.97) * 4; // 2–6px
+  const opacity = 0.3 + seededRandom(index * 11.13) * 0.7; // 0.3–1
+
+  return {
+    "--delay": `${delay}s`,
+    "--duration": `${duration}s`,
+    "--size": `${size}px`,
+    "--opacity": opacity,
+  };
+};
+
+onMounted(() => {
   updateParticleCount();
   window.addEventListener("resize", updateParticleCount);
+});
 
-  return () => {
-    window.removeEventListener("resize", updateParticleCount);
-  };
+onUnmounted(() => {
+  window.removeEventListener("resize", updateParticleCount);
 });
 </script>
 
