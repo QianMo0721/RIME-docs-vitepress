@@ -40,7 +40,7 @@ RIME · 雾凇是一个专注于科技整合包的 Minecraft 服务器，我们�
 ### 服务器地址
 
 ```
-mc.abreeze.icu | gtnh.abreeze.icu
+mc.abreeze.icu
 ```
 
 ### QQ 交流群
